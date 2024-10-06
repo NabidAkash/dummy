@@ -25,13 +25,13 @@ public class UserService {
     }
 
     public void saveUser(User user) {
-        Authority authority = authorityRepository.findByAuthority("ROlE_USER");
+        Authority authority = authorityRepository.findByAuthority("ROLE_USER");
         user.setAuthorities(Set.of(authority));
         userRepository.save(user);
     }
 
     public void saveAdmin(User user) {
-        Authority authority = authorityRepository.findByAuthority("ROlE_ADMIN");
+        Authority authority = authorityRepository.findByAuthority("ROLE_ADMIN");
         user.setAuthorities(Set.of(authority));
         userRepository.save(user);
     }
